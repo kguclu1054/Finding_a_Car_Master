@@ -37,15 +37,13 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        // Arka plan bulanık resim
-        Glide.with(this)
-            .load(R.drawable.car_img3)
-            .apply(RequestOptions.bitmapTransform(BlurTransformation(23, 2)))
-            .skipMemoryCache(true)
-            .diskCacheStrategy(DiskCacheStrategy.NONE)
-            .into(binding.loginBackground)
+        binding.btnKayitOl.setOnClickListener {
+            val intent = Intent(this@MainActivity, Register::class.java)
+            startActivity(intent)
+        }
 
-        // Giriş butonuna tıklama
+
+
         binding.loginButton.setOnClickListener {
             val email = binding.loginEmail.text.toString()
             val password = binding.loginPassword.text.toString()
@@ -69,6 +67,8 @@ class MainActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this@MainActivity, "Lütfen e-posta ve şifre girin!", Toast.LENGTH_SHORT).show()
             }
+
+
         }
     }
 }

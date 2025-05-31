@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,112 +8,124 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <ImageView
         android:id="@+id/login_background"
-        android:layout_width="413dp"
-        android:layout_height="736dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img5"/>
+
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6"
-        app:srcCompat="@drawable/car_img3" />
-
-    <EditText
-        android:id="@+id/login_email"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="266dp"
-        android:layout_marginEnd="54dp"
-        android:textStyle="bold"
-        android:ems="10"
-        android:hint="Kullanıcı Adı"
-        android:textColorHint="#CCFFFFFF"
-        android:textColor="#FFFFFFFF"
-        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_bias="0.5"
+        android:background="@drawable/cardview_background">
 
-    <EditText
-        android:id="@+id/login_password"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="54dp"
-        android:textStyle="bold"
-        android:ems="10"
-        android:textColorHint="#CCFFFFFF"
-        android:textColor="#FFFFFFFF"
-        android:hint="Şifre"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_email" />
 
-    <Button
-        android:id="@+id/login_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="54dp"
-        android:backgroundTint="#C0C0C0	"
-        android:text="Giriş Yap"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_password" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-    <Button
-        android:id="@+id/forgot_password_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="46dp"
-        android:background="@android:color/transparent"
-        android:minWidth="0dp"
-        android:minHeight="0dp"
-        android:padding="0dp"
-        android:text="Şifrenimi Unuttun?"
-        android:textAlignment="center"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_button" />
+                <EditText
+                    android:id="@+id/login_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Kullanıcı Adı"
+                    android:textStyle="bold"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="#666666"
+                    android:textColor="#000000"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/edittext_border" />
 
-    <TextView
-        android:id="@+id/text_hesabin_yok_mu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hesabın yok mu?"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/forgot_password_button"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="100dp" />
+                <EditText
+                    android:id="@+id/login_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Şifre"
+                    android:textStyle="bold"
+                    android:inputType="textPassword"
+                    android:textColorHint="#666666"
+                    android:textColor="#000000"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/edittext_border" />
 
-    <Button
-        android:id="@+id/btn_kayit_ol"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Kayıt ol"
-        android:background="@android:color/transparent"
-        android:textColor="#0033FF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:minWidth="0dp"
-        android:minHeight="0dp"
-        android:padding="0dp"
-        app:layout_constraintTop_toTopOf="@+id/text_hesabin_yok_mu"
-        app:layout_constraintBottom_toBottomOf="@+id/text_hesabin_yok_mu"
-        app:layout_constraintStart_toEndOf="@+id/text_hesabin_yok_mu"
-        android:layout_marginStart="4dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end">
+                    <Button
+                        android:id="@+id/forgot_password_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Şifreni mi Unuttun?"
+                        android:background="@android:color/transparent"
+                        android:textStyle="bold"
+                        android:textColor="#ff6a6a"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/login_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Giriş Yap"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="#eec591"/>
 
 
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:id="@+id/text_hesabin_yok_mu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hesabın yok mu?"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:includeFontPadding="false"
+                        android:layout_marginEnd="0dp" />
+
+                    <Button
+                        android:id="@+id/btn_kayit_ol"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:text="Kayıt Ol"
+                        android:textColor="#cdb38b"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:background="@android:color/transparent"
+                        android:padding="0dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
