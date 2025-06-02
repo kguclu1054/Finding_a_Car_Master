@@ -1,158 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    tools:context=".RegisterActivity">
 
-
+    <!-- Arka Plan -->
     <ImageView
         android:id="@+id/register_background"
-        android:layout_width="413dp"
-        android:layout_height="736dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img4" />
+
+    <!-- Kart Form -->
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        android:background="@drawable/img4" />
-
-    <EditText
-        android:id="@+id/register_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="54dp"
-        android:ems="10"
-        android:hint=" Ad ve Soyad Giriniz"
-        android:inputType="text"
-        android:textColor="#FFFFFFFF"
-        android:textColorHint="#CCFFFFFF"
-        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_email" />
+        app:layout_constraintVertical_bias="0.5"
+        android:background="@drawable/cardview_background">
 
-    <EditText
-        android:id="@+id/register_email"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="135dp"
-        android:layout_marginEnd="54dp"
-        android:ems="10"
-        android:hint=" E-posta adresinizi girin"
-        android:inputType="textEmailAddress"
-        android:textColor="#FFFFFFFF"
-        android:textColorHint="#CCFFFFFF"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-    <EditText
-        android:id="@+id/register_phone"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="54dp"
-        android:ems="10"
-        android:hint=" Telefon numarası girin"
-        android:inputType="phone"
-        android:textColor="#FFFFFFFF"
-        android:textColorHint="#CCFFFFFF"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_name" />
+            <EditText
+                android:id="@+id/register_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ad Soyad"
+                android:inputType="textPersonName"
+                android:textStyle="bold"
+                android:textColorHint="#666666"
+                android:textColor="#000000"
+                android:background="@drawable/edittext_border"
+                android:layout_marginTop="12dp" />
 
-    <EditText
-        android:id="@+id/register_password"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="54dp"
-        android:ems="10"
-        android:hint=" Şifrenizi girin(en az 6 karakter)"
-        android:inputType="textPassword"
-        android:textColor="#FFFFFFFF"
-        android:textColorHint="#CCFFFFFF"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_phone" />
+            <EditText
+                android:id="@+id/register_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="E-posta"
+                android:inputType="textEmailAddress"
+                android:textStyle="bold"
+                android:textColorHint="#666666"
+                android:textColor="#000000"
+                android:background="@drawable/edittext_border"
+                android:layout_marginTop="22dp" />
 
-    <EditText
-        android:id="@+id/register_password_verification"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="54dp"
-        android:ems="10"
-        android:hint="Şifrenizi tekrar girin"
-        android:inputType="textPassword"
-        android:textColor="#FFFFFFFF"
-        android:textColorHint="#CCFFFFFF"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_password" />
+            <EditText
+                android:id="@+id/register_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Telefon Numarası"
+                android:inputType="phone"
+                android:textStyle="bold"
+                android:textColorHint="#666666"
+                android:textColor="#000000"
+                android:background="@drawable/edittext_border"
+                android:layout_marginTop="22dp" />
 
-    <Button
-        android:id="@+id/register_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="54dp"
-        android:backgroundTint="#C0C0C0	"
-        android:text="Kayıt Ol"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_password_verification"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp">
 
-    <TextView
-        android:id="@+id/text_hesabin_var"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="50dp"
-        android:text="Zaten bir Hesabınız var mı"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_button" />
+                <EditText
+                    android:id="@+id/password_verification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Şifre (en az 6 karakter)"
+                    android:inputType="textPassword"
+                    android:textStyle="bold"
+                    android:textColorHint="#666666"
+                    android:textColor="#000000"
+                    android:background="@drawable/edittext_border"
+                    android:paddingEnd="48dp"
+                />
 
-    <Button
-        android:id="@+id/btn_giris_yap"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Giriş Yap"
-        android:background="@android:color/transparent"
-        android:textColor="#0033FF"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:minWidth="0dp"
-        android:minHeight="0dp"
-        android:padding="0dp"
-        app:layout_constraintTop_toTopOf="@+id/text_hesabin_var"
-        app:layout_constraintBottom_toBottomOf="@+id/text_hesabin_var"
-        app:layout_constraintStart_toEndOf="@+id/text_hesabin_var"
-        android:layout_marginStart="4dp" />
+                <ImageView
+                    android:id="@+id/password_toggle"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignEnd="@id/password_verification"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/invisible_password"
+                    android:contentDescription="Şifre Göster/Gizle" />
+            </RelativeLayout>
 
 
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp">
+
+                <EditText
+                    android:id="@+id/register_password_verification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Şifre Tekrar"
+                    android:inputType="textPassword"
+                    android:textStyle="bold"
+                    android:textColorHint="#666666"
+                    android:textColor="#000000"
+                    android:background="@drawable/edittext_border"
+                    android:paddingEnd="48dp" />
+
+                <ImageView
+                    android:id="@+id/password_verification_toggle"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="12dp"
+                    android:cursorVisible="false"
+                    android:src="@drawable/invisible_password"
+                    android:contentDescription="Şifre Göster/Gizle" />
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/register_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kayıt Ol"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginTop="50dp"
+                android:backgroundTint="#eec591" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:id="@+id/text_hesabin_var"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Zaten hesabınız var mı?"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_giris_yap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Giriş Yap"
+                    android:textColor="#cdb38b"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:background="@android:color/transparent"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:padding="0dp"
+                    android:layout_marginStart="6dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

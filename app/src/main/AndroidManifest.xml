@@ -25,6 +25,7 @@
         </activity>
         <activity android:name=".Register" />
 
+        <activity android:name=".Password_Reset"/>
 
     </application>
 
